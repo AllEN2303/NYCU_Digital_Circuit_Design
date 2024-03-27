@@ -1,0 +1,268 @@
+#! c:/iverilog-x86/bin/vvp
+:ivl_version "10.0 (stable)" "(v10_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_02ce9920 .scope module, "t_Lab1" "t_Lab1" 2 1;
+ .timescale 0 0;
+P_02cd4090 .param/l "period" 1 2 5, +C4<00000000000000000000000000010100>;
+v02cdeb20_0 .var "A", 0 0;
+v02cdeb78_0 .var "B", 0 0;
+v02cde910_0 .var "C", 0 0;
+v02cde4f0_0 .var "D", 0 0;
+v02cde968_0 .net "F1", 0 0, L_02ce34d8;  1 drivers
+v02cdeff0_0 .net "F2", 0 0, L_02cdfe90;  1 drivers
+v02cdeee8_0 .net "F3", 0 0, L_02cdfaa0;  1 drivers
+S_02ce99f0 .scope module, "Dataflow" "Lab1_dataflow" 2 8, 3 1 0, S_02ce9920;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "F"
+    .port_info 1 /INPUT 1 "A"
+    .port_info 2 /INPUT 1 "B"
+    .port_info 3 /INPUT 1 "C"
+    .port_info 4 /INPUT 1 "D"
+L_02ce31c0 .functor NOT 1, v02cdeb78_0, C4<0>, C4<0>, C4<0>;
+L_02ce36d0 .functor OR 1, v02cdeb20_0, L_02ce31c0, C4<0>, C4<0>;
+L_02ce3640 .functor AND 1, v02cde910_0, L_02ce36d0, C4<1>, C4<1>;
+L_02cdfc98 .functor AND 1, v02cdeb78_0, v02cde910_0, C4<1>, C4<1>;
+L_02ce00d0 .functor NOT 1, v02cde4f0_0, C4<0>, C4<0>, C4<0>;
+L_02cdf9c8 .functor OR 1, L_02cdfc98, L_02ce00d0, C4<0>, C4<0>;
+L_02cdff20 .functor AND 1, v02cdeb20_0, L_02cdf9c8, C4<1>, C4<1>;
+L_02cdfe90 .functor OR 1, L_02ce3640, L_02cdff20, C4<0>, C4<0>;
+v011cc528_0 .net "A", 0 0, v02cdeb20_0;  1 drivers
+v011cc580_0 .net "B", 0 0, v02cdeb78_0;  1 drivers
+v011cc790_0 .net "C", 0 0, v02cde910_0;  1 drivers
+v011cc688_0 .net "D", 0 0, v02cde4f0_0;  1 drivers
+v011cc738_0 .net "F", 0 0, L_02cdfe90;  alias, 1 drivers
+v011cc7e8_0 .net "w1", 0 0, L_02ce31c0;  1 drivers
+v011cc898_0 .net "w2", 0 0, L_02ce36d0;  1 drivers
+v02cde128_0 .net "w3", 0 0, L_02ce3640;  1 drivers
+v02cde5f8_0 .net "w4", 0 0, L_02cdfc98;  1 drivers
+v02cde7b0_0 .net "w5", 0 0, L_02ce00d0;  1 drivers
+v02cde2e0_0 .net "w6", 0 0, L_02cdf9c8;  1 drivers
+v02cde3e8_0 .net "w7", 0 0, L_02cdff20;  1 drivers
+S_02ce5000 .scope module, "Gatelevel" "Lab1_gatelevel" 2 7, 4 1 0, S_02ce9920;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "F"
+    .port_info 1 /INPUT 1 "A"
+    .port_info 2 /INPUT 1 "B"
+    .port_info 3 /INPUT 1 "C"
+    .port_info 4 /INPUT 1 "D"
+L_02ce3760 .functor NOT 1, v02cdeb78_0, C4<0>, C4<0>, C4<0>;
+L_02ce37a8 .functor OR 1, v02cdeb20_0, L_02ce3760, C4<0>, C4<0>;
+L_02ce3250 .functor AND 1, v02cde910_0, L_02ce37a8, C4<1>, C4<1>;
+L_02ce3448 .functor AND 1, v02cdeb78_0, v02cde910_0, C4<1>, C4<1>;
+L_02ce3838 .functor NOT 1, v02cde4f0_0, C4<0>, C4<0>, C4<0>;
+L_02ce3490 .functor OR 1, L_02ce3448, L_02ce3838, C4<0>, C4<0>;
+L_02ce3688 .functor AND 1, v02cdeb20_0, L_02ce3490, C4<1>, C4<1>;
+L_02ce34d8 .functor OR 1, L_02ce3688, L_02ce3250, C4<0>, C4<0>;
+v02cde1d8_0 .net "A", 0 0, v02cdeb20_0;  alias, 1 drivers
+v02cde808_0 .net "B", 0 0, v02cdeb78_0;  alias, 1 drivers
+v02cdebd0_0 .net "C", 0 0, v02cde910_0;  alias, 1 drivers
+v02cde180_0 .net "D", 0 0, v02cde4f0_0;  alias, 1 drivers
+v02cde6a8_0 .net "F", 0 0, L_02ce34d8;  alias, 1 drivers
+v02cdeac8_0 .net "w1", 0 0, L_02ce3760;  1 drivers
+v02cde338_0 .net "w2", 0 0, L_02ce37a8;  1 drivers
+v02cde9c0_0 .net "w3", 0 0, L_02ce3250;  1 drivers
+v02cde230_0 .net "w4", 0 0, L_02ce3448;  1 drivers
+v02cde650_0 .net "w5", 0 0, L_02ce3838;  1 drivers
+v02cde700_0 .net "w6", 0 0, L_02ce3490;  1 drivers
+v02cde288_0 .net "w7", 0 0, L_02ce3688;  1 drivers
+S_02ce50d0 .scope module, "UDP" "Lab1_gatelevel_UDP" 2 9, 5 13 0, S_02ce9920;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "F"
+    .port_info 1 /INPUT 1 "A"
+    .port_info 2 /INPUT 1 "B"
+    .port_info 3 /INPUT 1 "C"
+    .port_info 4 /INPUT 1 "D"
+L_02cdfa10 .functor NOT 1, v02cdeb78_0, C4<0>, C4<0>, C4<0>;
+UDP_or_and .udp/comb "or_and", 3
+ ,"??00"
+ ,"0010"
+ ,"1?11"
+ ,"?111";
+L_02ce0118 .udp UDP_or_and, v02cdeb20_0, L_02cdfa10, v02cde910_0;
+L_02ce0040 .functor AND 1, v02cdeb78_0, v02cde910_0, C4<1>, C4<1>;
+L_02cdfb30 .functor NOT 1, v02cde4f0_0, C4<0>, C4<0>, C4<0>;
+L_02cdfa58 .udp UDP_or_and, L_02ce0040, L_02cdfb30, v02cdeb20_0;
+L_02cdfaa0 .functor OR 1, L_02cdfa58, L_02ce0118, C4<0>, C4<0>;
+v02cde440_0 .net "A", 0 0, v02cdeb20_0;  alias, 1 drivers
+v02cde390_0 .net "B", 0 0, v02cdeb78_0;  alias, 1 drivers
+v02cdea18_0 .net "C", 0 0, v02cde910_0;  alias, 1 drivers
+v02cde758_0 .net "D", 0 0, v02cde4f0_0;  alias, 1 drivers
+v02cdea70_0 .net "F", 0 0, L_02cdfaa0;  alias, 1 drivers
+v02cde8b8_0 .net "w1", 0 0, L_02cdfa10;  1 drivers
+v02cde498_0 .net "w3", 0 0, L_02ce0118;  1 drivers
+v02cde548_0 .net "w4", 0 0, L_02ce0040;  1 drivers
+v02cde860_0 .net "w5", 0 0, L_02cdfb30;  1 drivers
+v02cde5a0_0 .net "w7", 0 0, L_02cdfa58;  1 drivers
+    .scope S_02ce9920;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cdeb20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cdeb78_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cde910_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cde4f0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cdeb20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cdeb78_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cde910_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cde4f0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cdeb20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cdeb78_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cde910_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cde4f0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cdeb20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cdeb78_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cde910_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cde4f0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cdeb20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cdeb78_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cde910_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cde4f0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cdeb20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cdeb78_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cde910_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cde4f0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cdeb20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cdeb78_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cde910_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cde4f0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cdeb20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cdeb78_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cde910_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cde4f0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cdeb20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cdeb78_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cde910_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cde4f0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cdeb20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cdeb78_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cde910_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cde4f0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cdeb20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cdeb78_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cde910_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cde4f0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cdeb20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cdeb78_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cde910_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cde4f0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cdeb20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cdeb78_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cde910_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cde4f0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cdeb20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cdeb78_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cde910_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cde4f0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cdeb20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cdeb78_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cde910_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v02cde4f0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cdeb20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cdeb78_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cde910_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v02cde4f0_0, 0, 1;
+    %delay 20, 0;
+    %end;
+    .thread T_0;
+    .scope S_02ce9920;
+T_1 ;
+    %delay 300, 0;
+    %vpi_call 2 108 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_02ce9920;
+T_2 ;
+    %vpi_call 2 111 "$dumpfile", "Lab1.vcd" {0 0 0};
+    %vpi_call 2 112 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 6;
+    "N/A";
+    "<interactive>";
+    "t_Lab1.v";
+    "Lab1_dataflow.v";
+    "Lab1_gatelevel.v";
+    "Lab1_gatelevel_UDP.v";

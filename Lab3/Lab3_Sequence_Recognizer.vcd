@@ -1,0 +1,335 @@
+$date
+	Mon Jun 13 03:00:33 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module t_Lab3_Sequence_Recognizer $end
+$var wire 1 ! z2 $end
+$var wire 1 " z1 $end
+$var reg 1 # clock $end
+$var reg 1 $ reset $end
+$var reg 1 % x $end
+$scope module state_diagram $end
+$var wire 1 # clock $end
+$var wire 1 $ reset $end
+$var wire 1 % x $end
+$var reg 3 & next_state [2:0] $end
+$var reg 3 ' state [2:0] $end
+$var reg 1 " z $end
+$upscope $end
+$scope module structure $end
+$var wire 1 ( D0 $end
+$var wire 1 ) D1 $end
+$var wire 1 * D2 $end
+$var wire 1 # clock $end
+$var wire 1 + not_Q0 $end
+$var wire 1 , not_Q1 $end
+$var wire 1 - not_Q2 $end
+$var wire 1 . not_x $end
+$var wire 1 $ reset $end
+$var wire 1 / w1 $end
+$var wire 1 0 w10 $end
+$var wire 1 1 w2 $end
+$var wire 1 2 w3 $end
+$var wire 1 3 w4 $end
+$var wire 1 4 w5 $end
+$var wire 1 5 w6 $end
+$var wire 1 6 w7 $end
+$var wire 1 7 w8 $end
+$var wire 1 8 w9 $end
+$var wire 1 % x $end
+$var wire 1 ! z $end
+$var wire 1 9 Q2 $end
+$var wire 1 : Q1 $end
+$var wire 1 ; Q0 $end
+$scope module Dff0 $end
+$var wire 1 ( D $end
+$var wire 1 # clock $end
+$var wire 1 $ reset $end
+$var reg 1 ; Q $end
+$upscope $end
+$scope module Dff1 $end
+$var wire 1 ) D $end
+$var wire 1 # clock $end
+$var wire 1 $ reset $end
+$var reg 1 : Q $end
+$upscope $end
+$scope module Dff2 $end
+$var wire 1 * D $end
+$var wire 1 # clock $end
+$var wire 1 $ reset $end
+$var reg 1 9 Q $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0;
+0:
+09
+18
+17
+06
+05
+04
+03
+02
+01
+10
+0/
+1.
+1-
+1,
+1+
+0*
+0)
+1(
+b0 '
+b1 &
+0%
+0$
+0#
+0"
+0!
+$end
+#5
+1$
+#10
+08
+00
+0+
+1;
+b1 '
+1#
+#15
+0#
+#20
+1#
+#25
+0(
+07
+1)
+b10 &
+0.
+16
+0#
+1%
+#30
+1*
+0)
+11
+06
+1+
+0,
+b100 &
+0;
+1:
+b10 '
+1#
+#35
+1)
+1(
+14
+18
+1!
+0*
+b11 &
+1"
+1.
+01
+0#
+0%
+#40
+0(
+1*
+08
+0!
+0"
+b110 &
+12
+0+
+b11 '
+1;
+1#
+#45
+0#
+#50
+02
+1+
+13
+1/
+0-
+0;
+19
+b110 '
+1#
+#55
+0#
+#60
+1#
+#65
+0/
+04
+0.
+11
+0#
+1%
+#70
+1#
+#73
+0)
+b100 &
+1-
+03
+1,
+b0 '
+09
+0:
+0$
+#75
+0#
+1$
+#80
+0-
+19
+b100 '
+1#
+#85
+1(
+1/
+10
+1*
+b101 &
+1.
+01
+0#
+0%
+#90
+0(
+1)
+00
+b110 &
+15
+0+
+b101 '
+1;
+1#
+#95
+0*
+0/
+b10 &
+0.
+16
+0#
+1%
+#100
+1*
+11
+0)
+06
+1+
+0,
+05
+1-
+b100 &
+0;
+1:
+09
+b10 '
+1#
+#105
+1)
+1(
+14
+18
+1!
+0*
+b11 &
+1"
+1.
+01
+0#
+0%
+#110
+0(
+1*
+08
+0!
+0"
+b110 &
+12
+0+
+b11 '
+1;
+1#
+#115
+0*
+02
+04
+b10 &
+0.
+16
+0#
+1%
+#120
+1*
+0)
+11
+06
+1+
+b100 &
+0;
+b10 '
+1#
+#125
+0#
+#130
+0-
+1,
+b100 '
+19
+0:
+1#
+#135
+0#
+#140
+1#
+#145
+1(
+1/
+10
+1*
+b101 &
+1.
+01
+0#
+0%
+#150
+0(
+1)
+00
+b110 &
+15
+0+
+b101 '
+1;
+1#
+#155
+0#
+#160
+05
+1+
+14
+13
+0,
+0;
+1:
+b110 '
+1#
+#165
+0#

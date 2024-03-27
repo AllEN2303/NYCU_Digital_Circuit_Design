@@ -1,0 +1,52 @@
+$date
+	Sat May 07 00:07:03 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module t_Lab2_half_sub $end
+$var wire 1 ! diff $end
+$var wire 1 " bout $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$scope module HS $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 " bout $end
+$var wire 1 ! diff $end
+$var wire 1 % w1 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1%
+0$
+0#
+x"
+x!
+$end
+#2
+0"
+#4
+0!
+#30
+1$
+#32
+1"
+#34
+1!
+#60
+0%
+0$
+1#
+#62
+0"
+#90
+1$
+#94
+0!
+#140
